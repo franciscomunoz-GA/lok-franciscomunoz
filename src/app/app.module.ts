@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule }         from '@angular/common/http';
+// Poder recargar la página
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 //material
 import {MatDividerModule} from '@angular/material/divider';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -60,7 +62,9 @@ import { AlbumComponent } from './album/album.component';
     MatListModule,
     MatTooltipModule
   ],
-  providers: [],
+  providers: [
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

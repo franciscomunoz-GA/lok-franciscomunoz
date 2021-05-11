@@ -1,3 +1,5 @@
+# 2021-05-11 (V 1.5.2)
+    1) Corrección al recargar la página
 # 2021-05-11 (V 1.5.1)
     1) Correcciones en el diseño, se corrigen imagenes cuadradas a redondas
 # 2021-05-11 (V 1.5.0)
