@@ -13,12 +13,16 @@ export class ServicioService {
   constructor(private http: HttpClient) { }
   
   // Consumir WS o API REST por POST
-  public PostRequest(endPoint: string, data: any){
+  public PostRequest(endPoint: string, Tipo: string, data: any){
     // Ruta para consumir WS o API REST
     let serverName: string = "";
-    
-    serverName = environment.API;
-    
+    switch (Tipo) {
+      case 'APIPASS':            
+        // serverName = environment.APIPASS;
+        break;
+      case 'Login':
+        serverName = environment.Login;
+    }
     const headers = new HttpHeaders();
     headers.append('Access-Control-Allow-Origin' , '*');
     headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');    

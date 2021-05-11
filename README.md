@@ -1,3 +1,9 @@
+# 2021-05-10 (V 1.3.0)
+    1) Se habilita la sección del componente usuarios en las rutas
+    2) Se modifica el servicio para poder aceptar más de una API
+    3) Se le agrega validación de sesion al guard de usuarios
+    4) Se agregar progressbar al login
+    5) Se valida usuario y contraseña en login
 # 2021-05-10 (V 1.2.0)
     1) Se crea el diseño general para todo el proyecto para que los inputs midan el 100% de ancho
     2) Se crean las rutas para entrar a los diferentes componentes

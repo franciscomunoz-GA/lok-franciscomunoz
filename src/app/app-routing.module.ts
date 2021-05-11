@@ -10,6 +10,11 @@ const routes: Routes = [
     component: LoginComponent,
   },
   { 
+    path: 'Usuarios', 
+    component: UsuariosComponent,
+    canActivate: [UsuariosGuard]
+  },
+  { 
     path: '', 
     redirectTo: '/Usuarios',    
     pathMatch: 'full',
