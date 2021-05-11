@@ -25,13 +25,17 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { NavbarComponent } from './navbar/navbar.component';
 import {MatListModule} from '@angular/material/list';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { UsuariosAlbumComponent } from './usuarios-album/usuarios-album.component';
+import { AlbumComponent } from './album/album.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     UsuariosComponent,
-    NavbarComponent
+    NavbarComponent,
+    UsuariosAlbumComponent,
+    AlbumComponent
   ],
   imports: [
     BrowserModule,

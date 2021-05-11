@@ -1,0 +1,31 @@
+<mat-progress-bar mode="indeterminate" [hidden]="!Cargando" color="warn"></mat-progress-bar>
+<app-navbar></app-navbar>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-12" align="center">
+            <h1>
+                {{Usuario.first_name+" "+Usuario.last_name}}
+            </h1>
+            <h3>
+                {{Usuario.email}}
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 col-sm-4 col-md-3">
+            <img class="img-fluid mat-elevation-z4" src="{{Usuario.avatar}}" alt="">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-4" *ngFor="let Album of Albums">
+            <mat-card class="Carta">
+                <div class="textoAbajo">
+                    {{Album.title}}
+                </div>
+            </mat-card>
+            <br>
+        </div>
+    </div>
+</div>

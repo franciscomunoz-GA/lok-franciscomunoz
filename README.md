@@ -1,3 +1,8 @@
+# 2021-05-11 (V 1.5.0)
+    1) Se cierra la sessón
+    2) Se desarrolla las secciones de album y usuarios album
+        2.1) Se muestan los usuarios por la api
+        2.2) Se muestran los albums por api
 # 2021-05-11 (V 1.4.0)
     1) Se le da funcionalidad al componente de usuarios
         1.1) Se muestran los usuarios
@@ -22,3 +27,4 @@
     2) Se instala bootstrap https://ng-bootstrap.github.io/#/home
 # 2021-05-10 (V 1.0.0)
     1) Se crea el proyecto
+    https://jsonplaceholder.typicode.com/users/1/albums

@@ -1,3 +1,11 @@
 <mat-toolbar class="mat-elevation-z4">
-    <span>My Application</span>
+    
+    <span class="spacer"></span>
+    <button mat-button routerLink="/Usuarios">Home</button>
+    <button mat-button routerLink="/UsuariosAlbum">Album</button>    
+    <button mat-button (click)="CerrarSesion()">
+        <mat-icon>power_settings_new</mat-icon>
+        &nbsp;
+        Cerrar sesión
+    </button>
 </mat-toolbar>

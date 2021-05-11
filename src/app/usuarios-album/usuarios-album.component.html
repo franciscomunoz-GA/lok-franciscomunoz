@@ -1,0 +1,17 @@
+<mat-progress-bar mode="indeterminate" [hidden]="!Cargando" color="warn"></mat-progress-bar>
+<app-navbar></app-navbar>
+<br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4" *ngFor="let Usuario of Usuarios">
+            <mat-card class="MouseHover" (click)="SeleccionarUsuario(Usuario);">
+                <img mat-card-image src="{{Usuario.avatar}}">
+                <mat-card-header>                  
+                  <mat-card-title>{{Usuario.first_name + " " +Usuario.last_name}}</mat-card-title>
+                  <mat-card-subtitle>{{Usuario.email}}</mat-card-subtitle>
+                </mat-card-header>                        
+              </mat-card>
+              <br>
+        </div>
+    </div>
+</div>
