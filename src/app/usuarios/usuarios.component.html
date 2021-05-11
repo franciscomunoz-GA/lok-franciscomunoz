@@ -2,11 +2,15 @@
 <app-navbar></app-navbar>
 <br>
 <mat-drawer-container autosize>
-    <mat-drawer #drawer class="sidenav" mode="over">
+    <mat-drawer #drawer class="sidenav" mode="over">        
         <div class="container-fluid">
+            <br>
             <div class="row">
+                <button mat-icon-button class="SuperiorDerecha" (click)="drawer.toggle();">
+                    <mat-icon>highlight_off</mat-icon>
+                </button>
                 <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2" align="center">
-                    <img mat-card-image src="{{InformacionUsuario.imagen}}" class="mat-elevation-z4">                    
+                    <img src="{{InformacionUsuario.imagen}}" class="mat-elevation-z4 Redonda">                    
                     <br>
                     <form>
                         <mat-form-field class="full-width" color="primary" appearance="outline">
@@ -62,12 +66,18 @@
     </mat-drawer>
   
     <div class="FondoBlanco" >
-        <br><br>
+        <br><br>        
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-4" *ngFor="let Usuario of Usuarios">
                     <mat-card class="MouseHover" (click)="drawer.toggle(); SeleccionarUsuario(Usuario.id);">
-                        <img mat-card-image src="{{Usuario.avatar}}">
+                        <div class="row">
+                            <div class="col-12" align="center">
+                                <img class="Redonda" src="{{Usuario.avatar}}">
+
+                            </div>
+                        </div>
+                        <br>
                         <mat-card-header>                  
                           <mat-card-title>{{Usuario.first_name + " " +Usuario.last_name}}</mat-card-title>
                           <mat-card-subtitle>{{Usuario.email}}</mat-card-subtitle>

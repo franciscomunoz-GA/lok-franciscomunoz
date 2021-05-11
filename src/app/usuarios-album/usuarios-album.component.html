@@ -5,7 +5,12 @@
     <div class="row">
         <div class="col-12 col-sm-6 col-md-4 col-lg-4" *ngFor="let Usuario of Usuarios">
             <mat-card class="MouseHover" (click)="SeleccionarUsuario(Usuario);">
-                <img mat-card-image src="{{Usuario.avatar}}">
+                <div class="row">
+                    <div class="col-12" align="center">
+                        <img class="Redonda" src="{{Usuario.avatar}}">
+
+                    </div>
+                </div>
                 <mat-card-header>                  
                   <mat-card-title>{{Usuario.first_name + " " +Usuario.last_name}}</mat-card-title>
                   <mat-card-subtitle>{{Usuario.email}}</mat-card-subtitle>

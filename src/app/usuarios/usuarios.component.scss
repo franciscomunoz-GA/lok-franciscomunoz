@@ -9,5 +9,14 @@
   }
   .sidenav {
     padding: 20px;
-    width: 60%;
+    max-width: 500px;
+  }
+  .Redonda{
+    border-radius: 50%;
+    height: 200px;
+  }
+  .SuperiorDerecha{
+    position: absolute;
+    top: 8px;
+    right: 16px;
   }
