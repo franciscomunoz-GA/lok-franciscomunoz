@@ -1,3 +1,9 @@
+# 2021-05-11 (V 1.4.0)
+    1) Se le da funcionalidad al componente de usuarios
+        1.1) Se muestran los usuarios
+        1.2) Se modifica el usuario
+        1.3) Se muestan los posts
+        1.4) Se eliminan los postos
 # 2021-05-10 (V 1.3.0)
     1) Se habilita la sección del componente usuarios en las rutas
     2) Se modifica el servicio para poder aceptar más de una API

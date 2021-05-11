@@ -37,4 +37,14 @@ export class ServicioService {
     }
     return this.http.post((serverName + endPoint), body, { headers: headers });
   }
+  public GetRequest(API: string){
+    this.http.get<any>(environment.Login+API).subscribe({
+        next: data => {
+          return data.data;
+        },
+        error: error => {
+          return error;
+        }
+    })
+  }
 }

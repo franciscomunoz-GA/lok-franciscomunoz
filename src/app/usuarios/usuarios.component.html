@@ -1,1 +1,82 @@
-<p>usuarios works!</p>
+<mat-progress-bar mode="indeterminate" [hidden]="!Cargando" color="warn"></mat-progress-bar>
+<app-navbar></app-navbar>
+<mat-drawer-container autosize>
+    <mat-drawer #drawer class="sidenav" mode="over">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2" align="center">
+                    <img mat-card-image src="{{InformacionUsuario.imagen}}">                    
+                    <br>
+                    <form>
+                        <mat-form-field class="full-width" color="primary" appearance="outline">
+                            <mat-label>Nombre</mat-label>
+                            <input type="text" matInput [formControl]="InputNombre" [errorStateMatcher]="matcher">
+                            <mat-error *ngIf="InputNombre.hasError('required')">
+                                Nombre es <strong>requerido</strong>
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="full-width" color="primary" appearance="outline">
+                            <mat-label>Apellido</mat-label>
+                            <input type="text" matInput [formControl]="InputApellido" [errorStateMatcher]="matcher">
+                            <mat-error *ngIf="InputApellido.hasError('required')">
+                                Apellido es <strong>requerido</strong>
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="full-width" color="primary" appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <mat-icon matPrefix style="margin-right: 0.5em" color="primary">person</mat-icon>
+                            <input type="email" matInput [formControl]="InputEmail" [errorStateMatcher]="matcher" >          
+                            <mat-error *ngIf="InputEmail.hasError('email') && !InputEmail.hasError('required')">
+                                Por favor ingresa un Email
+                            </mat-error>
+                            <mat-error *ngIf="InputEmail.hasError('required')">
+                                Email es <strong>requerido</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </form>
+                    <button mat-raised-button color="primary" class="full-width" (click)="CambiarInformacion(InformacionUsuario.id)">Cambiar información</button>
+                    <mat-divider></mat-divider>
+                                        
+                </div>
+            </div>
+            <br>
+            <div class="row" *ngFor="let Post of Posts">
+                <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">{{Post.title}} </div>
+                <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+                    <small>
+                        {{Post.body}} 
+                    </small>
+                </div>
+                <div class="col-2">
+                    <button mat-icon-button color="warn" (click)="EliminarPost(Post.id)">
+                        <mat-icon matTooltip="Eliminar {{Post.title}}">cancel</mat-icon>
+                    </button>
+                </div>
+                <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+
+                    <mat-divider></mat-divider>
+                </div>
+            </div>
+        </div>
+    </mat-drawer>
+  
+    <div class="FondoBlanco" >
+        <br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4" *ngFor="let Usuario of Usuarios">
+                    <mat-card class="MouseHover" (click)="drawer.toggle(); SeleccionarUsuario(Usuario.id);">
+                        <img mat-card-image src="{{Usuario.avatar}}">
+                        <mat-card-header>                  
+                          <mat-card-title>{{Usuario.first_name + " " +Usuario.last_name}}</mat-card-title>
+                          <mat-card-subtitle>{{Usuario.email}}</mat-card-subtitle>
+                        </mat-card-header>                        
+                      </mat-card>
+                      <br>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+</mat-drawer-container>
+
