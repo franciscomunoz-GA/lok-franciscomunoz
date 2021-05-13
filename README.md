@@ -1,3 +1,5 @@
+# 2021-05-12 (V 1.5.3)
+    1) Corrección del recuadro en la parte inferior con el sidebar
 # 2021-05-11 (V 1.5.2)
     1) Corrección al recargar la página
 # 2021-05-11 (V 1.5.1)

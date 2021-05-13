@@ -6,6 +6,9 @@
 
   .FondoBlanco{
     background-color: white;
+    margin-bottom: 0px !important;
+    height: 100%;
+    // padding-bottom: 10vh;
   }
   .sidenav {
     padding: 20px;
@@ -19,4 +22,7 @@
     position: absolute;
     top: 8px;
     right: 16px;
+  }
+  .TodaPantalla{
+    height: 100% !important; position: absolute; width: 100%;
   }

@@ -1,7 +1,4 @@
-<mat-progress-bar mode="indeterminate" [hidden]="!Cargando" color="warn"></mat-progress-bar>
-<app-navbar></app-navbar>
-<br>
-<mat-drawer-container autosize>
+<mat-drawer-container class="TodaPantalla" autosize>
     <mat-drawer #drawer class="sidenav" mode="over">        
         <div class="container-fluid">
             <br>
@@ -65,6 +62,9 @@
         </div>
     </mat-drawer>
   
+    <mat-progress-bar mode="indeterminate" [hidden]="!Cargando" color="warn"></mat-progress-bar>
+    <app-navbar></app-navbar>
+    <br>
     <div class="FondoBlanco" >
         <br><br>        
         <div class="container">
